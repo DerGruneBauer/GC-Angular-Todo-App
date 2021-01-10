@@ -1,0 +1,31 @@
+<div class="outsideWrapper">
+  <div class="wrapper">
+    <h1>{{ title }}</h1>
+    <h4>{{ subTitle }}</h4>
+    <div class="listAndInputs">
+      <input placeholder="Filter your Todos" [(ngModel)]="searchText"/>
+      <div class = "nothingMessage" *ngIf = "todos.length < 1 ">Nothing to do!</div>
+      <div class="listOfTodos" *ngFor="let todo of todos | appFilter: searchText; let i = index" >
+        <div class="buttonAndTask">
+          <div class="index">{{ i + 1 }}</div>
+          <button
+            class="completedButton"
+            *ngIf="!todo.completed"
+            (click)="isComplete(todo)"
+          >
+            Complete
+          </button>
+          <span
+            [ngStyle]="{
+              'text-decoration': todo.completed ? 'line-through' : 'none'
+            }"
+            >{{ todo.task }}</span
+          >
+        </div>
+        <button class="remove" (click)="removeItem(i)">X</button>
+      </div>
+      <input placeholder="Add your To-Do" autofocus="" [(ngModel)]="newTodo.task" (keyup.enter)="addTodo()"/><br />
+      <button class="addButton" (click)="addTodo()">Add</button>
+    </div>
+  </div>
+</div>

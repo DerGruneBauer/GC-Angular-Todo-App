@@ -1,0 +1,90 @@
+.outsideWrapper {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.wrapper {
+    background-color: white;
+    height: auto;
+    width: 70vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0.75);
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+h4 {
+    margin: 0 0 10px 0;
+}
+
+.listAndInputs {
+    width: 90%;
+}
+
+input, .addButton { 
+    border-radius: 5px;
+}
+
+input {
+    border: solid 1px #eeeeee;
+    width: 100%;
+    height: 30px;
+    padding-left: 10px;
+    margin: 10px 0px;
+}
+
+input::placeholder {
+    color: gray;
+    letter-spacing: 1px;
+}
+
+.addButton { 
+    background-color: #FF1493;
+    border: none;
+    width: 102%;
+    height: 30px;
+    color: white;
+    margin: 0 0 30px 0;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+
+.listOfTodos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 102%;
+    margin: 5px 0;
+}
+
+.completedButton {
+    background-color: white;
+    border: solid 1px #ff69b4;
+    border-radius: 5px;
+    color: #ff69b4;
+    padding: 2px;
+    margin-right: 5px;
+}
+
+.buttonAndTask {
+    display: flex;
+}
+
+.index {
+    margin-right: 10px;
+}
+
+.nothingMessage {
+    font-weight: bold;
+    text-align: center;
+}
